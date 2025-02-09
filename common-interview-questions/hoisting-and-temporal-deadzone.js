@@ -23,8 +23,11 @@ console.log(var4)
 var4 = 'd'
 
 
+function fun(){ // normal function TDZ ends at first line
+    return 'x'
+}
 
 
-var fun = () => {  // arrow function's TDX
+var fun = () => {  // arrow function's TDZ ends here
     return 'x'
 }
