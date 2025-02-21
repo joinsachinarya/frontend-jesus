@@ -5,8 +5,11 @@ let foo  = function(){
 }
 
 
+
 var foo2 = function(){
     var args = Array.prototype.slice.call(arguments);
     console.log(args[1])
 }
 console.log(foo2(1,2,2))
+
+
