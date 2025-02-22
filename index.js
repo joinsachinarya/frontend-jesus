@@ -9,15 +9,10 @@ const crypto = require("crypto")
 
 
 
-function findHasWhichStartWith(prefix) {
-    let input = 0;
-    while (true) {
-        let inputStr = `gonna make you proud papa` + input.toString();
-        let hash = crypto.createHash('sha256').update(inputStr).digest('hex');
-        if (hash.startsWith(prefix)) {
-            return { input: inputStr, hash: hash };
-        }
-        input++;
-    }
+function findHasWhichStartWith(input) {
+    let inputStr = input.toString();
+    let hash = crypto.createHash('sha256').update(inputStr).digest('hex');
+    return { input: inputStr, hash: hash };
 }
-console.log(findHasWhichStartWith('0000'))
+console.log(findHasWhichStartWith(`harkirat => Raman | Rs 100
+Ram => Ankit | Rs 10`))
