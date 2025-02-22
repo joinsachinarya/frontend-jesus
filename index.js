@@ -7,3 +7,17 @@ try {
     console.error(e);
 }
 
+
+
+function findHasWhichStartWith() {
+    let input = 0;
+    while (true) {
+        const hash = createHmac('sha256', "Hey").update(input.toString()).digest('hex');
+        if (hash.startsWith('0000')){
+            console.log(hash, input.toString())
+            break;
+        }
+        input++;
+    }
+}
+findHasWhichStartWith()
