@@ -1,2 +1,2 @@
-# DSA.js
-Data structures and algorithm problems solved in JavaScript. or in C++
+# DSA-Practice
+This repo is for DS and A practice. Every commit contains different problem.
