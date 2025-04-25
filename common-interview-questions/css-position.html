@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    html {}
+
+    .gp {
+        width: 300px;
+        height: 300px;
+        background-color: blue;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        /* position: absolute;
+        top: 0px;
+        left: 0px; */
+        /* position: relative; */
+        /* position: fixed; */
+    }
+
+    .p {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .c {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        top: 20px;
+        left: 20px;
+        position: relative;
+    }
+
+
+    .s {}
+
+    /* static is default position , element static position will stay in normal flow in document and will not accept top/bottom/left/right properties  */
+    /* element which is positioned relative will be in normal flow of the document, it can take top/bottom/left/right properties to offset from its own original position */
+    /* element which is positioned absolute will not be in normal flow of the document, it can take top/bottom/left/right value according to it's nearest positioned (non static) (viewport if no positioned element) element */
+    /* element which is positioned fixed will not be in normal flow of the document, it can take top/bottom/left/right value according to viewport */
+    /* element which is positioned sticky will be in normal flow of the document, it behaves like both fixed and relative within it's parent, relative until it's  top/bottom/left/right offset is reached by scrolling and then it will behave as fixed but within it's parent only*/
+</style>
+
+
+<body>
+
+    <div class="gp">
+        <div class="p">
+            <div class="c">
+            </div>
+        </div>
+    </div>
+    <div class="s">
+    </div>
+
+</body>
+
+</html>
