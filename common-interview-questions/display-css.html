@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #ele1 {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+    }
+
+    #ele2 {
+        width: 200px;
+        height: 200px;
+    }
+
+    #ele3 {
+        width: 200px;
+        height: 200px;
+    }
+
+    #ele4 {
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    #ele5 {
+        display: grid;
+    }
+
+
+    /* block takes the full available width of it's container and respect width and height property , eg. div, p*/
+    /* inline takes only required width for it's content and doesn't respect width and height property , eg. span, b */
+    /* inline-block takes required width for it's content and respect width and height property, eg. img, button */
+    /* flex create a block level flex container which enable flexible layout for it's children */
+    /* inline-flex create a inline level flex container which enable flexible layout for it's children */
+    /* none hides the element from the webpage and takes no space, but it stays inside the dom */
+</style>
+
+
+<body>
+
+
+    Lorem, ipsum dolor sit amet consectetur <div id="ele1">DIV</div> adipisicing elit. Beatae, <span
+        id="ele2">SPAN</span> hic
+    omnis dicta harum
+    repudiandae vitae earum soluta cupiditate <img src="https://picsum.photos/10" alt="" id="ele3"> nulla inventore eum
+    ipsam perspiciatis,
+    sequi provident, repellat <div id="ele4">
+        <p>1</p>
+        <p>2</p>
+    </div> culpa
+    saepe consectetur<div id="ele5">
+        <p>1</p>
+        <p>2</p> non?
+
+</body>
+
+</html>
