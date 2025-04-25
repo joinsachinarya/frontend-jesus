@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    html {
+        font-size: 40px;
+    }
+
+    .p {
+        font-size: 0.5rem;
+        /* 20px bc it's root is 40px and unit is rem */
+    }
+
+    .c {
+        font-size: 0.5em;
+        /* 10px bc it's parent is 20px and unit is em */
+    }
+
+    /* .c {
+        font-size: 0.5rem;
+        20px bc root is 40px and unit is rem
+    } */
+
+    .s {
+        font-size: 0.5em;
+        /*  20px bc it's parent which is root itself is 40px and unit is em */
+    }
+</style>
+
+<body>
+
+    <div class="gp">
+        G P
+        <div class="p">
+            P
+            <div class="c">
+                C
+            </div>
+        </div>
+    </div>
+    <div class="s">
+        S
+    </div>
+
+</body>
+
+</html>
