@@ -8,7 +8,11 @@
 </head>
 
 <style>
-    html {}
+
+    div {
+        --black: #000000;
+        --red: #FF0000;
+    }
 
     .gp {
         width: 300px;
@@ -49,7 +53,12 @@
     }
 
 
-    .s {}
+    .s {
+        background-color: var(--red);
+        border: 2px solid var(--black);
+        width: 100px;
+        height: 100px;
+    }
 
     /* static is default position , element static position will stay in normal flow in document and will not accept top/bottom/left/right properties  */
     /* element which is positioned relative will be in normal flow of the document, it can take top/bottom/left/right properties to offset from its own original position */
