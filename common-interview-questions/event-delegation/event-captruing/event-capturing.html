@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Capturing</title>
+</head>
+
+<body>
+    <div id="parent">
+        Parent
+        <div id="child">
+            Child
+        </div>
+    </div>
+
+    <!-- 
+ Event Capturing is a phase in event propagation where the event flows 
+from the top most ancestor  down to the actual target element.
+
+Capturing is not default in JS , to achieve it, we pass `true` as the 3rd argument in `addEventListener`.
+-->
+    <script>
+        const parent = document.getElementById("parent");
+        const child = document.getElementById("child");
+
+        parent.addEventListener("click", () => {
+            console.log("Parent clicked ");
+        }, true); // true = capturing phase
+
+        child.addEventListener("click", () => {
+            console.log("Child clicked ");
+        }, true);
+    </script>
+</body>
+
+</html>

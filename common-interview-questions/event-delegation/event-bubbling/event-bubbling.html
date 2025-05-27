@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="parent">
+        Parent
+        <div id="child">
+            Child
+        </div>
+    </div>
+
+    <!-- 
+Event Bubbling is the default behavior in JavaScript where events propagate 
+from the target element upward through its ancestors.
+
+It's the opposite of capturing, and is used heavily in event delegation.
+-->
+    <script>
+        const parent = document.getElementById("parent")
+        const child = document.getElementById("child")
+
+
+        child.addEventListener(("click"), () => {
+            console.log("Child clicked") // both child's and parent's attached listeners will be trigger
+        })
+        parent.addEventListener("click", () => {
+            console.log("Parent clicked") // only parent's attached listener will trigger
+        })
+    </script>
+</body>
+
+</html>
