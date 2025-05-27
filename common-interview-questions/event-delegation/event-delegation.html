@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- 
+✅ Event delegation is a mechanism where we attach a single event listener to a common parent 
+instead of attaching individual listeners to each child — especially when all child elements 
+need to handle the event in a similar way.
+
+📌 For example, if I have a div with 100 buttons inside it, and on clicking any button 
+I want to increase the number inside it by 1 — then instead of attaching 100 event listeners 
+(on each button), I can just attach one listener to the parent div.
+
+💡 This works because JavaScript uses event bubbling — where an event triggered on a child 
+element bubbles up through its ancestors (like parent, grandparent etc).
+
+🎯 Inside the parent’s event handler, I can check if the event originated from a button using
+`event.target.tagName`, and if yes, I’ll handle it accordingly.
+-->
+
+    <script>
+
+        const ele = document.getElementById("root")
+
+        Array.from({ length: 5 }).fill("0").map(() => {
+            const child = document.createElement("button")
+            child.innerHTML = 0
+            ele.appendChild(child)
+        })
+
+
+        ele.addEventListener("click", (e) => {
+            console.log(e)
+            if (e.target.tagName === "BUTTON") {
+                e.target.innerHTML = Number(e.target.innerHTML) + 1
+            }
+        })
+
+    </script>
+</body>
+
+</html>
