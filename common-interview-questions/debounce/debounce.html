@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Debounce Example</title>
+</head>
+<body>
+  <input type="text" id="ele" />
+
+  <script>
+    function debounce(fn, delay) {
+      let timer;
+      return function () {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          fn.call(this);
+        }, delay);
+      };
+    }
+
+    function sayHi() {
+      console.log("hi");
+    }
+
+    const input = document.getElementById("ele");
+    input.addEventListener("input", debounce(sayHi, 300));
+  </script>
+</body>
+</html>
